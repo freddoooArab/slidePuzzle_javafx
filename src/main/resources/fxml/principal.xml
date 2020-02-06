@@ -1,8 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Scene?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.layout.HBox?>
+
 
 <VBox xmlns:fx="http://javafx.com/fxml">
-	<Text text="Slide Puzzles : Brain Fun"/>
+
+
+      <VBox styleClass="conteneurPrincipal" VBox.vgrow="ALWAYS">
+           
+            <HBox styleClass="boxParametres">
+                  <Label text="%parametres" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="36.0" />
+                     </font>
+                  </Label>
+            </HBox>
+            
+            <HBox styleClass="boxBouttonLangue" VBox.vgrow="ALWAYS">
+                  <Button styleClass="bouttonLangue" text="%langue" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="28.0" />
+                     </font>
+                  </Button>
+            </HBox>
+           
+            <HBox styleClass="boxBouttonSon" VBox.vgrow="ALWAYS">
+                  <Button styleClass="bouttonSon" text="%son" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="28.0" />
+                     </font>
+                  </Button>
+            </HBox>
+            
+            <HBox styleClass="boxBouttonCouleur" VBox.vgrow="ALWAYS">
+                  <Button styleClass="bouttonCouleur" text="%couleur" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="28.0" />
+                     </font>
+                  </Button>
+            
+            </HBox>
+      </VBox>
+	
 </VBox>
+
+

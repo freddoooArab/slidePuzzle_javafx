@@ -1,0 +1,49 @@
+.conteneurPrincipal {
+    -fx-alignment: center;
+    -fx-border-style: solid;
+    -fx-border-width: 5px;
+    -fx-border-color: #161620;
+    -fx-background-color: orange;
+	-fx-min-height:200px;
+}
+
+.boxParametres {
+	-fx-alignment: center;
+	-fx-border-margin:6px;
+	-fx-min-heigth:150px;
+}
+
+.boxBouttonLangue{
+	-fx-alignment: center;
+	-fx-border-margin:6px;
+	-fx-min-heigth:150px;
+}
+
+.boxBouttonSon{
+	-fx-alignment: center;
+	-fx-border-margin:6px;
+	-fx-min-height:150px;
+}
+
+.boxBouttonCouleur{
+	-fx-alignment: center;
+	-fx-border-width: 6px;
+	-fx-min-heigth:150px;
+}
+
+.bouttonLangue{
+	-fx-background-color:green;
+	-fx-border-width: 4px;
+	
+}
+
+.bouttonSon{
+	-fx-background-color:blue;
+	-fx-border-width: 4px;
+	
+}
+
+.bouttonCouleur{
+	-fx-background-color:red;
+	-fx-border-width: 4px;
+}
