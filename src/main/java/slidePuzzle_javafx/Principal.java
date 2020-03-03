@@ -31,6 +31,7 @@ public class Principal extends Application {
 		
 		fenetrePrincipale.setScene(scene);
 		
+		
 		fenetrePrincipale.show();
 	}
 	

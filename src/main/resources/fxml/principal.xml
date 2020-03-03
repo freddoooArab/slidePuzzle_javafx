@@ -6,6 +6,8 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.layout.HBox?>
+<?import slidePuzzle_javafx.MonBouton?>
+<?import slidePuzzle_javafx.slidePuzzle_javafx.CaseAjustable?>
 
 
 <VBox xmlns:fx="http://javafx.com/fxml">
@@ -19,30 +21,33 @@
                         <Font name="Arial Rounded MT Bold" size="36.0" />
                      </font>
                   </Label>
-            </HBox>
+			
+		  	</HBox>
+            
+            <CaseAjustable styleClass="image" url="/images/ovo.png" HBox.hgrow="ALWAYS"/>
             
             <HBox styleClass="boxBouttonLangue" VBox.vgrow="ALWAYS">
-                  <Button styleClass="bouttonLangue" text="%langue" HBox.hgrow="ALWAYS">
+                  <MonBouton styleClass="bouttonLangue" text="%langue" HBox.hgrow="ALWAYS">
                      <font>
                         <Font name="Arial Rounded MT Bold" size="28.0" />
                      </font>
-                  </Button>
+                  </MonBouton>
             </HBox>
            
             <HBox styleClass="boxBouttonSon" VBox.vgrow="ALWAYS">
-                  <Button styleClass="bouttonSon" text="%son" HBox.hgrow="ALWAYS">
+                  <MonBouton styleClass="bouttonSon" text="%son" HBox.hgrow="ALWAYS">
                      <font>
                         <Font name="Arial Rounded MT Bold" size="28.0" />
                      </font>
-                  </Button>
+                  </MonBouton>
             </HBox>
             
             <HBox styleClass="boxBouttonCouleur" VBox.vgrow="ALWAYS">
-                  <Button styleClass="bouttonCouleur" text="%couleur" HBox.hgrow="ALWAYS">
+                  <MonBouton styleClass="bouttonCouleur" text="%couleur" HBox.hgrow="ALWAYS">
                      <font>
                         <Font name="Arial Rounded MT Bold" size="28.0" />
                      </font>
-                  </Button>
+                  </MonBouton>
             
             </HBox>
       </VBox>
