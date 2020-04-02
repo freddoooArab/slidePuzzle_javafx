@@ -1,5 +1,3 @@
-rootProject.name = 'NOM_PROJET_prof'
-
 rootProject.name = 'slidePuzzle_javafx_prof'
 
 include ':commun'
