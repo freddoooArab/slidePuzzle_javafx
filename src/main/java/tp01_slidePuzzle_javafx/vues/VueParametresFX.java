@@ -17,155 +17,90 @@ import javafx.scene.text.Text;
 import tp01_slidePuzzle.enumerations.Choix;
 import tp01_slidePuzzle_client.commande.charger_locale.ChangerLocale;
 import tp01_slidePuzzle_client.commande.charger_locale.ChangerLocalePourEnvoi;
-import tp01_slidePuzzle_client.commande.choisir_choix.ChoisirChoix;
-import tp01_slidePuzzle_client.commande.choisir_choix.ChoisirChoixPourEnvoi;
 import tp01_slidePuzzle_client.commande.retour_accueil.RetourAccueil;
 import tp01_slidePuzzle_client.commande.retour_accueil.RetourAccueilPourEnvoi;
 import tp01_slidePuzzle_client.vues.VueParametres;
-import tp01_slidePuzzle_javafx.vues.composants.MonRadio;
-
 
 public class VueParametresFX implements VueParametres, Initializable {
-	
+
 	@FXML
-	private Text texteTmpParametres;
-	
-	@FXML
-	private MonRadio radioUn, radioDeux, radioTrois;
-	
-	@FXML
-	private Button boutonChangerLangue, boutonRetour;
+    private Button boutonChangerLangue;
 
-	private ChoisirChoixPourEnvoi choisirChoix;
-	private ChangerLocalePourEnvoi changerLocale;
-	private RetourAccueilPourEnvoi retourAccueil;
-	
-	
+    @FXML
+    private Button boutonRetour;
+    @FXML
+    private Text texteTmpPartieLocale;
 
-	@Override
-	public void initialize(URL location, ResourceBundle resources) {
-		J.appel(this);
-		
-		DoitEtre.nonNul(texteTmpParametres);
-		DoitEtre.nonNul(radioUn);
-		DoitEtre.nonNul(radioDeux);
-		DoitEtre.nonNul(radioTrois);
-		DoitEtre.nonNul(boutonChangerLangue);
-		DoitEtre.nonNul(boutonRetour);
+    private RetourAccueilPourEnvoi retourAccueil;
+    private ChangerLocalePourEnvoi changerLocale;
 
-		// Nouvelle vue?
-		texteTmpParametres.setText(texteTmpParametres.getText() + " (" + System.identityHashCode(this) + ")");
-	}
 
-	@Override
-	public void obtenirCommandesPourEnvoi() {
-		J.appel(this);
-		
-		choisirChoix = FabriqueCommande.obtenirCommandePourEnvoi(ChoisirChoix.class);
-		
-		changerLocale = FabriqueCommande.obtenirCommandePourEnvoi(ChangerLocale.class);
-		
-		retourAccueil = FabriqueCommande.obtenirCommandePourEnvoi(RetourAccueil.class);
-	}
 
-	@Override
-	public void installerCapteursEvenementsUsager() {
-		J.appel(this);
-		
-		radioUn.setOnMouseClicked(new EventHandler<Event>() {
-			@Override
-			public void handle(Event event) {
-				J.appel(this);
-				
-				choisirChoix.setChoix(Choix.UN);
-				choisirChoix.envoyerCommande();
-			}
-		});
-		
-		radioDeux.setOnMouseClicked(new EventHandler<Event>() {
-			@Override
-			public void handle(Event event) {
-				J.appel(this);
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        J.appel(this);
 
-				choisirChoix.setChoix(Choix.DEUX);
-				choisirChoix.envoyerCommande();
-			}
-		});
-		
-		radioTrois.setOnMouseClicked(new EventHandler<Event>() {
-			@Override
-			public void handle(Event event) {
-				J.appel(this);
 
-				choisirChoix.setChoix(Choix.TROIS);
-				choisirChoix.envoyerCommande();
-			}
-		});
-		
-		boutonRetour.setOnAction(new EventHandler<ActionEvent>() {
-			@Override
-			public void handle(ActionEvent event) {
-				J.appel(this);
-				
-				retourAccueil.envoyerCommande();
-			}
-		});
-		
-		boutonChangerLangue.setOnAction(new EventHandler<ActionEvent>() {
-			@Override
-			public void handle(ActionEvent event) {
-				J.appel(this);
-				
-				changerLocale.setLocale(choisirProchaineLangue());
-				changerLocale.envoyerCommande();
-			}
-		});
-	}
-	
-	private Locale choisirProchaineLangue() {
-		J.appel(this);
-		
-		Locale prochaineLangue = Locale.CANADA_FRENCH;
 
-		if(Locale.getDefault() == Locale.CANADA_FRENCH) {
-			
-			prochaineLangue = Locale.CANADA;
-		}
-		
-		return prochaineLangue;
-	}
+        // Nouvelle vue?
+        //texteTmpParametres.setText(texteTmpParametres.getText() + " (" +
+        //System.identityHashCode(this) + ")");
+    }
 
-	@Override
-	public void verifierCommandesPossibles() {
-		J.appel(this);
-	}
+    @Override
+    public void obtenirCommandesPourEnvoi() {
+        J.appel(this);
+
+        changerLocale = FabriqueCommande.obtenirCommandePourEnvoi(ChangerLocale.class);
+
+        retourAccueil = FabriqueCommande.obtenirCommandePourEnvoi(RetourAccueil.class);
+    }
+
+    @Override
+    public void installerCapteursEvenementsUsager() {
+        J.appel(this);
+
+        boutonRetour.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                J.appel(this);
+
+                retourAccueil.envoyerCommande();
+            }
+        });
+
+        boutonChangerLangue.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                J.appel(this);
+                changerLocale.setLocale(choisirProchaineLangue());
+                changerLocale.envoyerCommande();
+            }
+        }); 
+    }
+
+    private Locale choisirProchaineLangue() {
+        J.appel(this);
+
+        Locale prochaineLangue = Locale.CANADA_FRENCH;
+
+        if (Locale.getDefault() == Locale.CANADA_FRENCH) {
+
+            prochaineLangue = Locale.CANADA;
+        }
+
+        return prochaineLangue;
+    }
+
+    @Override
+    public void verifierCommandesPossibles() {
+        J.appel(this);
+    }
 
 	@Override
 	public void afficherChoix(Choix choix) {
-		J.appel(this);
-		
-		switch(choix) {
-		
-		case UN:
-			radioUn.selectionner(true);
-			radioDeux.selectionner(false);
-			radioTrois.selectionner(false);
-			break;
-
-		case DEUX:
-			radioUn.selectionner(false);
-			radioDeux.selectionner(true);
-			radioTrois.selectionner(false);
-			break;
-
-		case TROIS:
-			radioUn.selectionner(false);
-			radioDeux.selectionner(false);
-			radioTrois.selectionner(true);
-			break;
-		}
+		// TODO Auto-generated method stub
 		
 	}
-
 
 }

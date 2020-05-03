@@ -1,0 +1,13 @@
+Les règles du jeu consistent à faire sortir le bloc rouge de la plaque de jeu.
+
+Il y a un plaque avec plusieurs blocs dessus.
+
+Les blocs sont placés d'une façon à empêcher le bloc rouge de sortir directement
+vers la sortie.
+
+Le joueur doit déplacer les blocs de façon à pouvoir entamer la sortie du bloc rouge.
+
+Le joueur à autant de coups qu'il désire, mais le but du jeu est de le faire en le moins
+de coups possible.
+
+Une fois le bloc rouge sorti, en théorie, le joueur passe au niveau supérieuré<.
