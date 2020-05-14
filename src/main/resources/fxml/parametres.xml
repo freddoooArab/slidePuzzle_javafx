@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Scene?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import tp01_slidePuzzle_javafx.vues.composants.MonBouton?>
+
+
+<VBox xmlns:fx="http://javafx.com/fxml" alignment="center"
+	styleClass="conteneurPrincipal"
+	fx:controller="tp01_slidePuzzle_javafx.vues.VueParametresFX">
+
+	<VBox maxHeight="-Infinity" maxWidth="-Infinity"
+		minHeight="-Infinity" minWidth="-Infinity" prefHeight="429.0"
+		prefWidth="600.0" style="-fx-background-color: orange;">
+
+		<VBox alignment="CENTER" prefHeight="110.0" prefWidth="600.0">
+
+			<Label text="%Paramètres">
+			</Label>
+
+		</VBox>
+		<VBox alignment="CENTER" prefHeight="108.0" prefWidth="600.0">
+
+			<Button fx:id="boutonChangerLangue" mnemonicParsing="false" prefHeight="54.0"
+				prefWidth="258.0" style="-fx-background-color: blue;" text="%Langue">
+
+			</Button>
+
+		</VBox>
+		
+		<VBox alignment="CENTER" prefHeight="103.0" prefWidth="600.0">
+
+			<Button fx:id="boutonRetour" mnemonicParsing="false" prefHeight="46.0"
+				prefWidth="258.0" style="-fx-background-color: red;" text="%Retour">
+
+			</Button>
+
+		</VBox>
+
+	</VBox>
+</VBox>
