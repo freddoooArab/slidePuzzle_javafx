@@ -35,13 +35,13 @@ dependencies {
 
 
 task(joueur01, dependsOn: 'classes', type: JavaExec) {
-   main = 'slidePuzzle_javafx.Principal'
+   main = 'tp01_slidePuzzle_javafx.Principal'
    classpath = sourceSets.main.runtimeClasspath
    jvmArgs('-Duser.language=fr')
 }
 
 task(joueur01En, dependsOn: 'classes', type: JavaExec) {
-   main = 'slidePuzzle_javafx.Principal'
+   main = 'tp01_slidePuzzle_javafx.Principal'
    classpath = sourceSets.main.runtimeClasspath
    jvmArgs('-Duser.language=en')
 }
