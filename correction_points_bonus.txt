@@ -1,5 +1,6 @@
 2/5) ateliers 1-5
 0/1) présence portes ouvertes
 0/5) rapports d'erreurs
+
 0/5) documentations de méthodes
 2/5) utilisation de git et respects des conventions

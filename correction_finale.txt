@@ -1,4 +1,6 @@
-/100) Note finale avant ajustements
-+ /10) points bonus
+52.54/100) Note finale avant ajustements
++ 4/10) points bonus
 
-/100) Note finale ajustée
+60/100) Note finale ajustée
+	* en virtue du TP1
+
